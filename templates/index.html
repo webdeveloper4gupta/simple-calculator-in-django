@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+    <title>Simple calculator</title>
+</head>
+<body>
+    <center><h2>Simple calculator</h2></center>
+   
+    <form method="POST">
+        {% csrf_token %}
+       a: <input type="text" name="num1" size="35"></input><br/>
+       <br/>
+       <select name="opr">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br/><br/>
+       
+       b: <input type="text" name="num2" size="35"></input>
+      <br/><br/>
+       <input type="submit" value="calculate">
+     ans:  {{ result }}
+    </form>
+</body>
+</html>
+
